@@ -1,0 +1,8 @@
+Install:
+Using Cmake.
+
+- enter on directory source code
+- mkdir build && cd build
+- cmake .. 
+- make 
+- ./figura_1.0
