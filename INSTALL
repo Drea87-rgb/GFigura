@@ -5,4 +5,4 @@ Using Cmake.
 - mkdir build && cd build
 - cmake .. 
 - make 
-- ./Gfigura_1.0
+- ./main
