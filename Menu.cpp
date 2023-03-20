@@ -22,16 +22,29 @@ void Menu::menu(){
         switch(scelta){
             case 1:{
                 std::string largQuad = "";
+                double resto = 0;
                 for (int a = 0;a < 100;a++){
                     std::cout << std::endl;
                 }
-                std::cout << "Misura lato(meglio se numeri pari): ";
+                std::cout << "Misura lato: ";
                 std::cin >> largQuad;
-                Controllo::controllo(std::stoi(largQuad),std::stoi(largQuad));
-                Quadrato* quadrato = new Quadrato(std::stoi(largQuad),std::stoi(largQuad));
-                std::cout << quadrato->getFigura() + "\n";
-                quadrato->getImmagine();
-                delete quadrato;
+                try {
+                    Controllo::controllo(std::stoi(largQuad),std::stoi(largQuad));
+                    } catch (std::invalid_argument exc) {
+                        std::cout << "\nInserisci solo interi...\n";
+                        Menu::menu();
+                    }
+                if (std::stoi(largQuad) % 2 > 0){
+                    Quadrato* quadrato = new Quadrato(std::stoi(largQuad)-1,std::stoi(largQuad));
+                    std::cout << quadrato->getFigura() + "\n";
+                    quadrato->getImmagine();
+                    delete quadrato;
+                } else {
+                    Quadrato* quadrato = new Quadrato(std::stoi(largQuad),std::stoi(largQuad));
+                    std::cout << quadrato->getFigura() + "\n";
+                    quadrato->getImmagine();
+                    delete quadrato;
+                }
                 break;
             }
             case 2:{
@@ -44,6 +57,12 @@ void Menu::menu(){
                 std::cin >> largRett;
                 std::cout << "Misura altezza: ";
                 std::cin >> altRett;
+                try {
+                    Controllo::controllo(std::stoi(largRett),std::stoi(altRett));
+                    } catch (std::invalid_argument exc) {
+                        std::cout << "\nInserisci solo interi...\n";
+                        Menu::menu();
+                    }
                 Controllo::controllo(std::stoi(largRett),std::stoi(altRett));
                 Rettangolo* rettangolo = new Rettangolo(std::stoi(largRett),std::stoi(altRett));
                 std::cout << rettangolo->getFigura() + "\n";
@@ -56,13 +75,26 @@ void Menu::menu(){
                 for (int a = 0;a < 100;a++){
                     std::cout << std::endl;
                 }
-                std::cout << "Misura triangolo(equilatero)_(meglio se numeri pari): ";
+                std::cout << "Misura triangolo(equilatero): ";
                 std::cin >> largTri;
+                try {
+                    Controllo::controllo(std::stoi(largTri),std::stoi(largTri));
+                    } catch (std::invalid_argument exc) {
+                        std::cout << "\nInserisci solo interi...\n";
+                        Menu::menu();
+                    }
                 Controllo::controllo(std::stoi(largTri),std::stoi(largTri));
-                Triangolo* triangolo = new Triangolo(std::stoi(largTri),std::stoi(largTri));
-                std::cout << triangolo->getFigura() + "\n";
-                triangolo->getImmagine();
-                delete triangolo;
+                if (std::stoi(largTri) % 2 > 0){
+                    Triangolo* triangolo = new Triangolo(std::stoi(largTri)-1,std::stoi(largTri));
+                    std::cout << triangolo->getFigura() + "\n";
+                    triangolo->getImmagine();
+                    delete triangolo;
+                } else {
+                    Triangolo* triangolo = new Triangolo(std::stoi(largTri),std::stoi(largTri));
+                    std::cout << triangolo->getFigura() + "\n";
+                    triangolo->getImmagine();
+                    delete triangolo;
+                }
                 break;
             }
         }

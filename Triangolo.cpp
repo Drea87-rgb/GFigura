@@ -38,5 +38,5 @@ void Triangolo::getImmagine(){//Questa funzione crea e stampa un triangolo
 }
 
 std::string Triangolo::getFigura(){//questa funzione ritorna il nome della figura scelta
-    return "Hai scelto un __TRINAGOLO__\n";
+    return "Hai scelto un __TRIANGOLO__\n";
 }
