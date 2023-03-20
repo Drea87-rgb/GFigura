@@ -3,6 +3,6 @@ Using Cmake.
 
 - enter on directory source code
 - mkdir build && cd build
-- cmake .. 
+- cmake ..
 - make 
-- ./main
+- ./figura
