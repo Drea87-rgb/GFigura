@@ -7,7 +7,7 @@
 
 void Controllo::controllo(int l,int a){//questa funzione non accetta interi maggiori a 100
     const int maxMisura = 100;
-    const int minMisura = 2;
+    const int minMisura = 4;
     int larghezza,altezza;
     larghezza = l;
     altezza = a;
@@ -15,8 +15,9 @@ void Controllo::controllo(int l,int a){//questa funzione non accetta interi magg
         std::cout << "\nAccetto numeri inferiori a 100..." << std::endl;
         Menu::menu();
     } if (l < minMisura || a < minMisura) {
-        std::cout << "\nAccetto numeri superiori a 1..." << std::endl;
+        std::cout << "\nAccetto numeri superiori a 3..." << std::endl;
         Menu::menu();
     }
 }
+
 

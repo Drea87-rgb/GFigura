@@ -34,7 +34,7 @@ void Triangolo::getImmagine(){//Questa funzione crea e stampa un triangolo
             spaceV.append("");
         }
     }
-    std::cout << vuota + base + "\\";
+    std::cout << vuota + base + "\\" << std::endl;
 }
 
 std::string Triangolo::getFigura(){//questa funzione ritorna il nome della figura scelta

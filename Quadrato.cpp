@@ -14,20 +14,20 @@ void Quadrato::getImmagine(){//Questa funzione crea e stampa un quadrato
     std::string bss2 = "";
     std::string space = "";
 
-    for (int i = 0;i < Figura::getLarghezza();i++){
+    for (int i = 0;i < Figura::getLarghezza()*2;i++){
         stt += "_";
     }
 
-    for (int z = 0;z < Figura::getLarghezza();z++){
+    for (int z = 0;z < Figura::getLarghezza()*2;z++){
         bss2 += "_";
     }
 
-    for (int s =0;s < Figura::getLarghezza()-1;s++){
+    for (int s =0;s < Figura::getLarghezza()*2-1;s++){
         space += " ";
     }
 
-    for (int x = 0;x < Figura::getLarghezza()/2;x++){
-        if (x != Figura::getLarghezza()/2-1){
+    for (int x = 0;x < Figura::getLarghezza();x++){
+        if (x != Figura::getLarghezza()-1){
             bss += "| " + space + "|\n";
         } else bss += "|" + bss2 + "|\n";
     }

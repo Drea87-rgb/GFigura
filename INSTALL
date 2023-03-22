@@ -6,3 +6,11 @@ Using Cmake.
 - cmake ..
 - make 
 - ./figura
+
+Install:
+Using Cmake ninja
+- enter on directory source code
+- mkdir build && cd build
+- cmake -G Ninja ..
+- ninja
+- ./figura

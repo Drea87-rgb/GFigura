@@ -28,6 +28,9 @@ void Menu::menu(){
                 }
                 std::cout << "Misura lato: ";
                 std::cin >> largQuad;
+                for (int a = 0;a < 100;a++){
+                    std::cout << std::endl;
+                }
                 try {
                     Controllo::controllo(std::stoi(largQuad),std::stoi(largQuad));
                     } catch (std::invalid_argument exc) {
@@ -57,6 +60,9 @@ void Menu::menu(){
                 std::cin >> largRett;
                 std::cout << "Misura altezza: ";
                 std::cin >> altRett;
+                for (int a = 0;a < 100;a++){
+                    std::cout << std::endl;
+                }
                 try {
                     Controllo::controllo(std::stoi(largRett),std::stoi(altRett));
                     } catch (std::invalid_argument exc) {
@@ -77,6 +83,9 @@ void Menu::menu(){
                 }
                 std::cout << "Misura triangolo(equilatero): ";
                 std::cin >> largTri;
+                for (int a = 0;a < 100;a++){
+                    std::cout << std::endl;
+                }
                 try {
                     Controllo::controllo(std::stoi(largTri),std::stoi(largTri));
                     } catch (std::invalid_argument exc) {
